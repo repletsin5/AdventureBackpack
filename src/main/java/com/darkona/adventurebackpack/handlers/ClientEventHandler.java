@@ -63,15 +63,15 @@ public class ClientEventHandler
             }
         }
     }
-
+    //Why does this exist????????????????
     /**
      * @param event
-     */
+
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
     public void mouseWheelDetect(MouseEvent event)
     {
-        /*Special thanks go to MachineMuse, both for inspiration and the event. God bless you girl.*/
+        //Special thanks go to MachineMuse, both for inspiration and the event. God bless you girl.
         Minecraft mc = Minecraft.getMinecraft();
         int dWheel = event.dwheel;
         if (dWheel != 0)
@@ -108,5 +108,5 @@ public class ClientEventHandler
             }
         }
     }
-
+    */
 }
