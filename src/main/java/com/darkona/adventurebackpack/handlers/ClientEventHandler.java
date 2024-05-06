@@ -63,10 +63,9 @@ public class ClientEventHandler
             }
         }
     }
-    //Why does this exist????????????????
-    /**
+    /*
      * @param event
-
+    */
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
     public void mouseWheelDetect(MouseEvent event)
@@ -89,6 +88,7 @@ public class ClientEventHandler
                         ItemStack heldItem = player.inventory.getStackInSlot(slot);
                         Item theItem = heldItem.getItem();
 
+                        /*
                         if (SlotTool.isValidTool(heldItem) ||
                                 (BackpackNames.getBackpackColorName(backpack).equals("Skeleton") && theItem.equals(Items.bow)))
                         {
@@ -96,7 +96,7 @@ public class ClientEventHandler
                             ServerActions.cycleTool(player, dWheel, slot);
                             event.setCanceled(true);
                         }
-
+                         */
                         if (theItem instanceof ItemHose)
                         {
                             ModNetwork.net.sendToServer(new CycleToolPacket.CycleToolMessage(dWheel, slot, CycleToolPacket.SWITCH_HOSE_ACTION));
@@ -108,5 +108,5 @@ public class ClientEventHandler
             }
         }
     }
-    */
+
 }
