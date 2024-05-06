@@ -24,7 +24,7 @@ sourceCompatibility = 1.6
 targetCompatibility = 1.6
 
 
-version = "1.7.10-0.8d"
+version = "1.7.10-0.8d-ns"
 group = "com.darkona.adventurebackpack" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "adventurebackpack"
 
@@ -64,5 +64,3 @@ processResources {
         expand 'version':project.version, 'mcversion':project.minecraft.version
     }
 }
-
-idea { module { inheritOutputDirs = true } }
