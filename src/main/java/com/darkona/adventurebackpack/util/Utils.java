@@ -64,9 +64,6 @@ public class Utils
                 month = calendar.get(Calendar.MONTH) + 1,
                 day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        if (AdventureBackpack.instance.chineseNewYear) return "ChinaNewYear";
-        if (AdventureBackpack.instance.hannukah) return "Hannukah";
-        if (month == Utils.calculateEaster(year)[0] && day == Utils.calculateEaster(year)[1]) return "Easter";
         String dia = "Standard";
         if (month == 1)
         {
@@ -77,7 +74,6 @@ public class Utils
         {
             if (day == 1) dia = "Shuttle";//Columbia
             if (day == 14) dia = "Valentines";
-            if (day == 23) dia = "Fatherland";
         }
         if (month == 3)
         {
@@ -85,38 +81,28 @@ public class Utils
         }
         if (month == 4)
         {
-            if (day == 1) dia = "Fools";
-            if (day == 25) dia = "Italy";
         }
         if (month == 5)
         {
-            if (day == 8 || day == 9 || day == 10) dia = "Liberation";
         }
         if (month == 6)
         {
         }
         if (month == 7)
         {
-            if (day == 4) dia = "USA";
             if (day == 24) dia = "Bolivar";
-            if (day == 14) dia = "Bastille";
         }
         if (month == 8)
         {
         }
         if (month == 9)
         {
-            if (day == 19) dia = "Pirate";
         }
         if (month == 10)
         {
-            if (day == 3) dia = "Germany";
-            if (day == 12) dia = "Columbus";
-            if (day == 31) dia = "Halloween";
         }
         if (month == 11)
         {
-            if (day == 2) dia = "Muertos";
         }
         if (month == 12)
         {
