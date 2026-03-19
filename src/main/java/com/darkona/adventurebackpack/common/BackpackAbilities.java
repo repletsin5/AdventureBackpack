@@ -208,7 +208,7 @@ public class BackpackAbilities
         }
         if (nightVision == null || nightVision.getDuration() < 40 && nightVision.getAmplifier() != -4)
         {
-            player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 5000, -4));
+            player.addPotionEffect(new PotionEffect(Potion.nightVision.id, Integer.MAX_VALUE, -4));
         }
     }
 
@@ -216,7 +216,7 @@ public class BackpackAbilities
     {
         if (player.isInWater())
         {
-            player.addPotionEffect(new PotionEffect(Potion.waterBreathing.getId(), 1, -5));
+            player.addPotionEffect(new PotionEffect(Potion.waterBreathing.getId(), Integer.MAX_VALUE, 5));
             itemBat(player, world, backpack);
         }else{
             backpackRemovals.itemSquid(player,world, backpack);
@@ -234,9 +234,9 @@ public class BackpackAbilities
         if (player.isPotionActive(Potion.fireResistance.id)) {
             potion = player.getActivePotionEffect(Potion.fireResistance);
         }
-        if (potion == null || potion.getDuration() < 5 && potion.getAmplifier() != -5)
+        if (potion == null || potion.getDuration() < 5 && potion.getAmplifier() != 5)
         {
-            player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 5000, -5));
+            player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, Integer.MAX_VALUE, 5));
         }
     }
 
@@ -318,7 +318,7 @@ public class BackpackAbilities
         // 4 is New Moon, 5 is Waxing Crescent, 6 is First Quarter and 7 is Waxing Gibbous
         if (world.getMoonPhase() == 0 && !world.isDaytime())
         {
-            player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 1, 1));
+            player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), Integer.MAX_VALUE, 1));
         }
         if (player.onGround)
         {
@@ -418,16 +418,16 @@ public class BackpackAbilities
         if (player.isPotionActive(Potion.regeneration.id)) {
             potion = player.getActivePotionEffect(Potion.regeneration);
         }
-        if (potion == null || potion.getDuration() < 40 && potion.getAmplifier() != -5)
+        if (potion == null || potion.getDuration() < 40 && potion.getAmplifier() != 5)
         {
-            player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), 5000, -5));
+            player.addPotionEffect(new PotionEffect(Potion.regeneration.getId(), Integer.MAX_VALUE, 5));
         }
         potion = null;
         if (player.isPotionActive(Potion.damageBoost.id)) {
             potion = player.getActivePotionEffect(Potion.damageBoost);
         }
-        if (potion == null || potion.getDuration() < 40 && potion.getAmplifier() != -5) {
-            player.addPotionEffect(new PotionEffect(Potion.damageBoost.getId(), 5000, -5));
+        if (potion == null || potion.getDuration() < 40 && potion.getAmplifier() != 5) {
+            player.addPotionEffect(new PotionEffect(Potion.damageBoost.getId(), Integer.MAX_VALUE, 5));
         }
     }
 
@@ -730,8 +730,8 @@ public class BackpackAbilities
         if (noteTime >= 0 && noteTime < Utils.secondsToTicks(147))
         {
             player.setSprinting(true);
-            player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 40, 2));
-            player.addPotionEffect(new PotionEffect(Potion.jump.getId(), 40, 2));
+            player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), Integer.MAX_VALUE, 2));
+            player.addPotionEffect(new PotionEffect(Potion.jump.getId(), Integer.MAX_VALUE, 2));
             if (noteTime % 2 == 0)
             {
                 //Visuals.NyanParticles(player, world);
@@ -746,7 +746,7 @@ public class BackpackAbilities
             potion = player.getActivePotionEffect(Potion.moveSpeed);
         }
         if (potion == null || potion.getDuration() < 40 && potion.getAmplifier() != -5) {
-            player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 5000, -5));
+            player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), Integer.MAX_VALUE, -5));
         }
         inv.setLastTime(noteTime);
         inv.markDirty();
