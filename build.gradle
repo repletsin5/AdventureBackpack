@@ -20,9 +20,8 @@ plugins {
 
 apply plugin: 'forge'
 
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
-
+sourceCompatibility =  JavaVersion.VERSION_1_8
+targetCompatibility =  JavaVersion.VERSION_1_8
 
 group = "com.darkona.adventurebackpack" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "adventurebackpack"
